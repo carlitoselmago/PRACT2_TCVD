@@ -2,3 +2,11 @@
 
 ## Dataset utilizado
 https://www.kaggle.com/datasets/ishajangir/crime-data
+
+
+### Instalación
+
+Ejecuta
+```
+pip install -r requirements.txt
+```
