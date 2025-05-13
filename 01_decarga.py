@@ -27,5 +27,5 @@ else:
 
 # Leemos CSV como Pandas dataset
 df = pd.read_csv(dest_path)
-print(df.head())
+print(df.describe())
 

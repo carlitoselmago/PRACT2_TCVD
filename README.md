@@ -10,3 +10,8 @@ Ejecuta
 ```
 pip install -r requirements.txt
 ```
+
+### Archivos del repositorio
+
+- 01_decarga : Descarga el dataset utilizando la librería kagglehub en la carpeta 'dataset'
+- 02_integracion_y_seleccion : XXXX
