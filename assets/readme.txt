@@ -1,0 +1,1 @@
+contiene gráficos relativos a la práctica
