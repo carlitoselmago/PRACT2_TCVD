@@ -5,7 +5,7 @@ import kagglehub
 from helpers import *
 
 
-dest_path = os.path.join(dest_folder, archivo)
+dest_path = os.path.join(dest_folder, archivo+'.csv')
 
 # Creamos una carpeta destino si no existe
 os.makedirs(dest_folder, exist_ok=True)
