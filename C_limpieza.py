@@ -1,5 +1,3 @@
-import pandas as pd
-import os
 from helpers import *
 
 
@@ -77,6 +75,15 @@ df['Part 1-2'] = df['Part 1-2'].astype('category')
 df['Vict Sex'] = df['Vict Sex'].astype('category')
 df['Vict Descent'] = df['Vict Descent'].astype('category')
 df['Status'] = df['Status'].astype('category')
+
+# Tratamiento de las variables de tiempo
+# Convertir la columna 'DATE OCC' a datetime + tratamiento de variables derivadas
+df['DATE OCC'] = pd.to_datetime(df['DATE OCC'], errors='coerce')
+df['DIA_SEMANA'] = df['DATE OCC'].dt.day_name()
+df['MES'] = df['DATE OCC'].dt.month
+
+# Crear franjas horarias basadas en 'TIME OCC' (de tipo HHMM, como 1430)
+df['FRANJA_HORARIA'] = df['TIME OCC'].apply(categorizar_hora)
 
 
 # Guardamos el dataset como Pickle para que se mantengan los tipos asignados

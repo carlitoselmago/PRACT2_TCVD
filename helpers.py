@@ -1,6 +1,19 @@
 import pandas as pd
 import os
+import shutil
+import kagglehub
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.cluster import KMeans
+from sklearn.metrics import roc_auc_score, roc_curve
+import matplotlib.pyplot as plt
+from scipy.stats import chi2_contingency
+import seaborn as sns
+import numpy as np
 
 #Variables globales
 archivo = 'Crime_Data_from_2020_to_Present'
@@ -49,3 +62,15 @@ def imputar_con_regresion(df, columna_objetivo, columnas_predictoras):
     predicciones = modelo.predict(X_pred)
 
     return predicciones
+
+def categorizar_hora(hora):
+    if pd.isna(hora): return 'Desconocida'
+    hora = int(hora)
+    if 500 <= hora < 1200:
+        return 'Mañana'
+    elif 1200 <= hora < 1700:
+        return 'Tarde'
+    elif 1700 <= hora < 2100:
+        return 'Noche'
+    else:
+        return 'Madrugada'
