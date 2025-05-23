@@ -114,7 +114,9 @@ plt.xlabel('Número de clusters (k)')
 plt.ylabel('Inercia')
 plt.title('Método del codo para seleccionar k')
 plt.grid(True)
+plt.savefig('assets/D_analisis_01.png')
 plt.show()
+
 
 # Entrenar modelo final con k=3
 kmeans_final = KMeans(n_clusters=3, random_state=42, n_init='auto')
@@ -133,6 +135,7 @@ plt.ylabel("Latitud")
 plt.title("Clusters de crímenes por ubicación (k=3)")
 plt.grid(True)
 plt.colorbar(scatter, label='Cluster')
+plt.savefig('assets/D_analisis_02.png')
 plt.show()
 
 # Número de crímenes por clúster
