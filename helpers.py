@@ -10,6 +10,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from sklearn.cluster import KMeans
 from sklearn.metrics import roc_auc_score, roc_curve
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 import matplotlib.pyplot as plt
 from scipy.stats import chi2_contingency
 import seaborn as sns
