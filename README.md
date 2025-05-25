@@ -7,13 +7,14 @@ Jose Carlos Carbonell Martínez
 ## Dataset utilizado
 https://www.kaggle.com/datasets/ishajangir/crime-data
 
-
 ### Instalación
 
 Ejecuta
 ```
 pip install -r requirements.txt
 ```
+
+Testeado en Python 3.12 en Windows
 
 ### Archivos del repositorio
 
@@ -24,8 +25,7 @@ pip install -r requirements.txt
 - B_integracion_y_seleccion : Muestreo de la población total
 - C_limpieza: proceso de limpieza, imputación y combinación de variables
 - D_analisis: Análisis estadístico
-- E_analisis: Análisis estadístico adicional
-- F_exportar: Símplemente exporta el dataset a csv
+- E_exportar: Exporta el dataset procesado a csv
 
 Los archivos se deben ejecutar en orden alfabético, cada archivo procesará el dataset y creará un archivo nuevo si pertoca para el siguiente paso del proceso.
 
